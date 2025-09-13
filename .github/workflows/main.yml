@@ -29,6 +29,9 @@ jobs:
         run: | 
             pwd
             ls -la Trebuchet
+            ls -la Trebuchet/build
+            ls -la Trebuchet/build/outputs/
+            ls -la 
 
       - name: Setup build tool version variable
         shell: bash
