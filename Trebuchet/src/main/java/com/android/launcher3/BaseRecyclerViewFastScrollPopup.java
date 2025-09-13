@@ -139,7 +139,7 @@ public class BaseRecyclerViewFastScrollPopup {
     public void draw(Canvas c) {
         if (isVisible()) {
             // Draw the fast scroller popup
-            int restoreCount = c.save(Canvas.MATRIX_SAVE_FLAG);
+            int restoreCount = c.save(); //(Canvas.MATRIX_SAVE_FLAG);
             c.translate(mBgBounds.left, mBgBounds.top);
             mTmpRect.set(mBgBounds);
             mTmpRect.offsetTo(0, 0);
