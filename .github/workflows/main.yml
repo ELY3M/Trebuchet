@@ -28,10 +28,7 @@ jobs:
       - name: current dir
         run: | 
             pwd
-            ls -la Trebuchet
-            ls -la Trebuchet/build
-            ls -la Trebuchet/build/outputs/
-            ls -la 
+            ls -la Trebuchet/build/outputs/apk/release
 
       - name: Setup build tool version variable
         shell: bash
@@ -44,7 +41,7 @@ jobs:
         uses: r0adkll/sign-android-release@v1
         id: sign_app
         with:
-          releaseDirectory: app/build/outputs/apk/release/
+          releaseDirectory: Trebuchet/build/outputs/apk/release/
           signingKeyBase64: ${{ secrets.KEY }}
           alias: ${{ secrets.ALIAS }}
           keyStorePassword: ${{ secrets.PASSWORD }}
